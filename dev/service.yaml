@@ -4,9 +4,8 @@ metadata:
   name: myapp-service
 spec:
   selector:
-    app: aplicacion-ms
+    app: myapp
   ports:
   - port: 8080
     protocol: TCP
     targetPort: 8080
-  
