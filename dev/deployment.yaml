@@ -10,10 +10,11 @@ spec:
   template:
     metadata:
       labels:
-        app: aplicacion-ms
+        app: myapp
     spec:
       containers:
-      - name: products-service
-        image: 538758558904.dkr.ecr.us-east-1.amazonaws.com/micro-servicios:latest
+      - name: myapp
+        image: nanajanashia/argocd-app:1.2
         ports:
         - containerPort: 8080
+
