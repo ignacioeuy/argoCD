@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: payments
+  name: orders
   namespace: argocd
 spec:
   project: default
@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/ignacioeuy/argoCD.git
     targetRevision: HEAD
-    path: ./
+    path: orders
   destination: 
     server: https://kubernetes.default.svc
     namespace: argocd
