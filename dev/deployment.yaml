@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: payments
+  namespace: argocd
 spec:
+  replicas: 1
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: myapp
-  replicas: 2
+      app: payments
   template:
     metadata:
       labels:
-        app: myapp
+        app: payments
     spec:
       containers:
-      - name: myapp
-        image: nanajanashia/argocd-app:1.2
+      - image: 538758558904.dkr.ecr.us-east-1.amazonaws.com/micro-servicios:latest
+        name: payments
         ports:
-        - containerPort: 8080
-
+        - containerPort: 80
