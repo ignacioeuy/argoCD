@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: payments
+  name: products
   namespace: argocd
 spec:
   replicas: 1
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: payments
+      app: products
   template:
     metadata:
       labels:
-        app: payments
+        app: products
     spec:
       containers:
       - image: 538758558904.dkr.ecr.us-east-1.amazonaws.com/micro-servicios:latest
