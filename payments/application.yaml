@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/ignacioeuy/argoCD.git
     targetRevision: HEAD
-    path: ./payments
+    path: argoCD/payments
   destination: 
     server: https://kubernetes.default.svc
     namespace: argocd
